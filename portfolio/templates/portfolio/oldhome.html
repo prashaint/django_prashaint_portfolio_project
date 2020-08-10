@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Prashaint Mishra</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body align='center'>
+	<h1>Prashaint Mishra's Portfolio</h1>
+	<p>
+	{% for project in projects %}
+		<h2>{{ project.title }}</h2>
+		<h3>{{ project.description }}</h3>
+		<img src="{{ project.image.url }}" height="400" width="400"> 
+		{% if project.url %}
+		<br><a href="{{ project.url }}">Project Link</a>
+		{% endif %}
+	{% endfor %}
+	</p>
+</body>
+</html>

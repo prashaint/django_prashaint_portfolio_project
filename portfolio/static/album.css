@@ -1,0 +1,38 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #185a9d;  /* fallback for old browsers */
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #185a9d;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #e74c3c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
