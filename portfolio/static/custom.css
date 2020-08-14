@@ -1,9 +1,10 @@
 .jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin-bottom: 0;
   background-color: #185a9d;  /* fallback for old browsers */
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
@@ -20,34 +21,12 @@
   font-weight: 300;
 }
 
-.jumbotron .container {
+.jumbotron {
   max-width: 40rem;
-}
-
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
-
-.container-gradient {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-.bg-gradient {
-  background: #ff0084;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #33001b, #ff0084);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #33001b, #ff0084); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
 h1, h2, h3, h4, .sans-open {
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -62,4 +41,12 @@ p {
   font-size: 0.875em; /* 14px/16=0.875em */
 }
 
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
 
