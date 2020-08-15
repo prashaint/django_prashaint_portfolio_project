@@ -1,52 +1,115 @@
-.jumbotron {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin-bottom: 0;
-  background-color: #185a9d;  /* fallback for old browsers */
+body{
+	background: #eeeeee;
+	font-family: 'Varela Round', sans-serif;
 }
-
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    background-color: #185a9d;
-  }
+.form-inline {
+	display: inline-block;
 }
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
+.navbar-header.col {
+	padding: 0 !important;
+}	
+.navbar {		
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #d6d6d6;
+	box-shadow: 0 0 4px rgba(0,0,0,.1);
 }
-
-.jumbotron h1 {
-  font-weight: 300;
+.nav-link {
+	margin: 0 5px;
 }
-
-.jumbotron {
-  max-width: 40rem;
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -8px 0;
+	float: left;
+	margin-right: 10px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-h1, h2, h3, h4, .sans-open {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
+.navbar .navbar-brand {
+	color: #555;
+	padding-left: 0;
+	font-size: 20px;
+	padding-right: 50px;
+	font-family: 'Raleway', sans-serif;
 }
-
-.text-sans {
-  font-family: 'Open Sans', sans-serif;
-  color: black;
+.navbar .navbar-brand b {
+	font-weight: bold;
+	color: #eb5844;
 }
-
-p {
-  font-size: 0.875em; /* 14px/16=0.875em */
+.navbar .navbar-nav a:hover, .navbar .navbar-nav a:focus {
+	color: #f08373 !important;
 }
-
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.navbar .navbar-nav a.active, .navbar .navbar-nav a.active:hover {
+	color: #eb5844 !important;
+	background: transparent !important;
 }
-
-footer p {
-  margin-bottom: .25rem;
+.search-box {
+	position: relative;
+}	
+.search-box input.form-control {		
+	padding-right: 35px;
+	border-radius: 0;
+	padding-left: 0;
+	border-width: 0 0 1px 0;
+	box-shadow: none;
 }
-
+.search-box input.form-control:focus {		
+	border-color: #f08373;		
+}
+.search-box .input-group-text {
+	min-width: 35px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: 7px 0 7px 7px;
+	height: 100%;
+}
+.search-box i {
+	color: #a0a5b1;
+	font-size: 19px;
+}
+.navbar .nav-item i {
+	font-size: 18px;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .nav-item.show > a {
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777;
+	padding: 8px 20px;
+	line-height: normal;
+	font-size: 15px;
+}
+.navbar .navbar-form {
+	margin-right: 0;
+	margin-left: 0;
+	border: 0;
+}
+@media (min-width: 992px){
+	.form-inline .input-group {
+		width: 250px;
+		margin-right: 30px;
+	}
+}
+@media (max-width: 991px){
+	.form-inline {
+		display: block;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.input-group {
+		width: 100%;
+	}
+}
