@@ -114,3 +114,12 @@ body{
 	}
 }
 
+.background {
+	background: rgb(12,9,58);
+	background: linear-gradient(90deg, rgba(12,9,58,1) 0%, rgba(9,9,121,1) 44%, rgba(0,212,255,1) 100%);
+}
+
+/* .customJumboBg{
+	background-image: url("#Image path");
+	} */
+
