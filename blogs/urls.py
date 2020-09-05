@@ -9,5 +9,5 @@ app_name = 'blogs'
 urlpatterns = [
     path('', views.tech_blogs, name='tech_blogs'),
     path('<int:blog_id>/', views.details, name='details'),
-    #path('portfolio/', include('portfolio.urls')),
+    path('user_signup/', views.user_signup, name="user_signup"),
 ]

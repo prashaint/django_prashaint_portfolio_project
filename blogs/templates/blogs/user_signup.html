@@ -1,0 +1,46 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+
+  <div class="jumbotron jumbotron-fluid bg-dark text-white">
+    <div class="container text-center">
+      <h1 class="display-4">Blogs share your thoughts to world and helps people find right solution</h1>
+      <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  <div class="container marketing text-center">
+  <h1>New User Sign-up Form</h1>
+  <p>Please fill following form to signup!</p>
+  <hr class="featurette-divider">
+  <h2> {{ error }} </h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up!</button>
+    <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button" type="submit">Sign up!</a></p> -->
+  </form>
+ 
+    <!-- START THE FEATURETTES
+{% for blog in blogs %}
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+      <div class="col-md-7">
+        <a href="{% url 'blogs:details' blog.id %}"><h2 class="featurette-heading">{{ blog.title }}</h2></a>
+        <p class="lead">{{ blog.body }}</p>
+        <p><a class="btn btn-lg btn-primary" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
+        <p class="lead"><span class="text-muted">Author: {{ blog.author }}</span></p>
+        <p class="lead"><span class="text-muted">Created on: {{ blog.created_date }}</span></p>
+        <p class="lead"><span class="text-muted">Published on: {{ blog.published_date }}</span></p>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+{% endfor %} -->
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+{% endblock %}
