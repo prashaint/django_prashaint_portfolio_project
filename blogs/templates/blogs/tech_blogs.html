@@ -2,41 +2,41 @@
 
 {% block content %}
 {% load static %}
-
-  <div class="jumbotron jumbotron-fluid bg-dark text-white">
-    <div class="container text-center">
-      <h1 class="display-4">Blogs share your thoughts to world and helps people find right solution</h1>
-      <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
+<div class="container-lg mt-3 text-center text-info">
+  <div class="jumbotron jumbotron-fluid bg-dark text-white" style="background-image: url({% static '/blog-img.jpeg' %}); background-size: 100% 100%;">
+    <!-- <img class="bd-placeholder-img" src="" alt="Los Angeles" width="300" height="200"> -->
+    <div class="container-sm mt-3 text-center text-info">
+    <br><br><br><br><br>
     </div>
   </div>
+</div>
   <div class="container marketing">
-  <h1>Our featured bloggers</h1>
+  <h3>Our featured bloggers</h3><br>
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <img src="{% static '/prashaint.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
+        <h3>Prashaint Mishra</h3>
+        <p>Avid blogger in technology and innovation landscape. Bigdata Spark is focus for his blogs.</p>
+        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <img src="{% static '/shubham.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
+        <h3>Shubham Pandey</h3>
+        <p>Versatile writer for various areas like tech, travel foods etc. Focus on creativeness in his posts.</p>
+        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <img src="{% static '/pragati.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
+        <h3>Pragati Mishra</h3>
+        <p>Travel and Food is key focus area for blogs. Expolring Lifestyle and home decor for her posts.</p>
+        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
 
     <!-- START THE FEATURETTES -->
 {% for blog in blogs %}
-    <hr class="featurette-divider">
     
     <div class="row featurette">
       <div class="col-md-7">
@@ -51,6 +51,13 @@
 
     <hr class="featurette-divider">
 {% endfor %}
+<div class="container-sm mt-3 text-center bg-info text-white">
+  <br>
+  <h3 class="display-6">Blogs share your thoughts to world and helps people find right solution</h1>
+  <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
+  <br>
+</div>
+<hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->

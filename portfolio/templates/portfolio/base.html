@@ -42,7 +42,7 @@
   </head>
   <body>
     <header>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <nav class="navbar navbar-expand-md navbar-grey fixed-top bg-light">
     <a class="navbar-brand" href="#">
       <img src="{% static '/logo.png' %}" alt="Logo" style="width:40px;">
     </a>
@@ -51,17 +51,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'about' %}">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Me</a>
+          <a class="nav-link" href="#">Contact Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'blogs:tech_blogs' %}" tabindex="-1" aria-disabled="true">Blogs</a>
+          <a class="nav-link" href="{% url 'blogs:tech_blogs' %}">Blogs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% static '/Prashaint_Mishra.pdf' %}">Download CV</a>
