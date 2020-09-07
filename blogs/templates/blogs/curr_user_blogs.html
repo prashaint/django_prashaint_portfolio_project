@@ -1,4 +1,4 @@
-{% extends 'portfolio/base.html' %}
+{% extends 'blogs/base.html' %}
 
 {% block content %}
 {% load static %}
@@ -11,7 +11,7 @@
   </div>
 </div>
   <div class="container marketing">
-  <h2>Welcome to your accout page!</h2><br>
+  <h2>Welcome {{ user.username }} to your account page!</h2><br>
     <!-- START THE FEATURETTES -->
 {% for blog in blogs %}
 <hr class="featurette-divider">
