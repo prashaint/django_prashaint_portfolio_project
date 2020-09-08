@@ -2,18 +2,13 @@
 
 {% block content %}
 {% load static %}
-<div class="container text-center">
-  <div class="jumbotron jumbotron-fluid bg-info text-white">
-      <h1 class="display-6">Blogs share your thoughts to world and helps people find right solution</h1>
-      <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
-  </div>
-</div>
+
   <hr class="featurette-divider">
   <div class="container">
   <div class="card" >
     <div class="card-header bg-info text-white"><h3>User logout confirmation page</h3></div>
     <div class="card-body">
-        <p><h3> Hey {{ user.username }}, You are logged out successfully!</h3></p>
+        <p><h3> Hey{{ user.username }}, You are logged out successfully!</h3></p>
     </div>
     <div class="card-footer bg-info text-white">Powered by Django</div>
   </div>

@@ -2,14 +2,7 @@
 
 {% block content %}
 {% load static %}
-<div class="container-lg mt-3 text-center text-info">
-  <div class="jumbotron jumbotron-fluid bg-dark text-white" style="background-image: url({% static '/blog-img.jpeg' %}); background-size: 100% 100%;">
-    <!-- <img class="bd-placeholder-img" src="" alt="Los Angeles" width="300" height="200"> -->
-    <div class="container-sm mt-3 text-center text-info">
-    <br><br><br><br><br>
-    </div>
-  </div>
-</div>
+
   <div class="container marketing">
   <h3>Our featured bloggers</h3><br>
     <!-- Three columns of text below the carousel -->
@@ -33,23 +26,28 @@
         <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-
-    <!-- START THE FEATURETTES -->
-{% for blog in blogs %}
-<hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-7">
-        <a href="{% url 'blogs:details' blog.id %}"><h4>{{ blog.title }}</h4></a>
-        <p class="lead">{{ blog.body }}</p>
-        <p><a class="btn btn-lg btn-primary" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
-        <p class="lead"><span class="text-muted">Author: {{ blog.author }}</span></p>
-        <p class="lead"><span class="text-muted">Created on: {{ blog.created_date }}</span></p>
-        <p class="lead"><span class="text-muted">Published on: {{ blog.published_date }}</span></p>
-      </div>
-    </div>
-
     <hr class="featurette-divider">
+    <!-- START THE FEATURETTES -->
+<div class="row row-cols-1 row-cols-md-3">
+{% for blog in blogs %}
+<div class="col mb-4">
+  <div class="card bg-gradient-light text-dark" style="width: 25rem;">
+    <img src="#" class="card-img-top" alt="card-img">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.title }}</h5>
+      <p class="card-text">{{ blog.body }}</p>
+      <p><a class="btn btn-sm btn-primary" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
+      <p class="text-muted">
+        <span class="text-muted">Author: {{ blog.author }}</span><br>
+        <span class="text-muted">Created on: {{ blog.created_date }}</span><br>
+        <span class="text-muted">Published on: {{ blog.published_date }}</span><br>
+      </p>
+    </div>
+  </div>
+</div>
 {% endfor %}
+</div>
+<hr class="featurette-divider">
 <div class="container-sm mt-3 text-center bg-info text-white">
   <br>
   <h3 class="display-6">Blogs share your thoughts to world and helps people find right solution</h1>

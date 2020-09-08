@@ -2,23 +2,18 @@
 
 {% block content %}
 {% load static %}
-<div class="container text-center">
-  <div class="jumbotron jumbotron-fluid bg-info text-white">
-      <h1 class="display-6">Blogs share your thoughts to world and helps people find right solution</h1>
-      <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
-  </div>
-</div>
+
   <hr class="featurette-divider">
   <div class="container">
   <div class="card" >
     <div class="card-header bg-info text-white"><h3>User Login Form</h3></div>
     <div class="card-body">
-      <p>Please fill following form to Login!</p>
+      <p><b>Please fill following form to Login!</b></p>
         <p><h4> {{ error }} </h4></p>
         <form method="POST">
           {% csrf_token %}
           {{ form.as_p }}
-          <button type="submit">Login</button>
+          <button class="btn btn-primary" type="submit">Login</button>
           <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button" type="submit">Sign up!</a></p> -->
         </form>
     </div>

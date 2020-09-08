@@ -2,19 +2,11 @@
 
 {% block content %}
 {% load static %}
-<div class="container text-center">
-  <div class="jumbotron bg-info text-white">
-    <div class="container text-center">
-      <h1 class="display-6">Blogs share your thoughts to world and helps people find right solution</h1>
-      <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
-    </div>
-  </div>
-</div>
+
   <div class="container marketing">
   <h3>Detailed Blog Post # {{ blog.id }}</h3>
     <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
-    
     <div class="row featurette">
       <div class="col-md-7">
         <p><h3>{{ blog.title }}</h3></p>
@@ -28,9 +20,15 @@
     </div>
 
     <hr class="featurette-divider">
-
     <!-- /END THE FEATURETTES -->
-
   </div><!-- /.container -->
-
+  <div class="container text-center">
+    <div class="jumbotron bg-success text-white">
+      <div class="container text-center">
+        <h2 class="display-5">Blogs share your thoughts to world and helps people find right solution</h2>
+        <p class="lead">Good blogs requires better understanding of subject<br>focus on reader's perspective with examples to explain the subject.  </p>
+      </div>
+    </div>
+  </div>
+  <hr class="featurette-divider">
 {% endblock %}
