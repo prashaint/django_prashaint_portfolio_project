@@ -32,7 +32,7 @@
 {% for blog in blogs %}
 <div class="col mb-4">
   <div class="card bg-gradient-light text-dark" style="width: 25rem;">
-    <img src="#" class="card-img-top" alt="card-img">
+    <img src="{% static '/logo.png' %}" class="card-img-top" alt="card-img">
     <div class="card-body">
       <h5 class="card-title">{{ blog.title }}</h5>
       <p class="card-text">{{ blog.body }}</p>
