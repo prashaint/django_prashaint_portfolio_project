@@ -11,19 +11,19 @@
         <img src="{% static '/prashaint.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
         <h3>Prashaint Mishra</h3>
         <p>Avid blogger in technology and innovation landscape. Bigdata Spark is focus for his blogs.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-outline-success" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img src="{% static '/shubham.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
         <h3>Shubham Pandey</h3>
         <p>Versatile writer for various areas like tech, travel foods etc. Focus on creativeness in his posts.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-outline-success" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img src="{% static '/pragati.jpg' %}" class="rounded-circle" alt="Prashaint" width="150" height="150">
         <h3>Pragati Mishra</h3>
         <p>Travel and Food is key focus area for blogs. Expolring Lifestyle and home decor for her posts.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-outline-success" href="#" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
     <hr class="featurette-divider">
@@ -36,11 +36,11 @@
     <div class="card-body">
       <h5 class="card-title">{{ blog.title }}</h5>
       <p class="card-text">{{ blog.body }}</p>
-      <p><a class="btn btn-sm btn-primary" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
+      <p><a class="btn btn-outline-success" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
       <p class="text-muted">
-        <span class="text-muted">Author: {{ blog.author }}</span><br>
-        <span class="text-muted">Created on: {{ blog.created_date }}</span><br>
-        <span class="text-muted">Published on: {{ blog.published_date }}</span><br>
+        <h6><span class="text-muted">Author: {{ blog.author }}</span></h6>
+        <h6><span class="text-muted">Last updated on: {{ blog.updated_on }}</span></h6>
+        <h6><span class="text-muted">Created on: {{ blog.created_on }}</span></h6>
       </p>
     </div>
   </div>
