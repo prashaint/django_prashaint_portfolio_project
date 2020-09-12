@@ -40,9 +40,9 @@
     <link href="{% static '/carousel.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static '/custom.css' %}"/>
   </head>
-  <body>
+  <body class="bg-light text-dark">
     <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top">
     <a class="navbar-brand" href="{% url 'home' %}">
       <img src="{% static '/logo.png' %}" alt="Logo" style="width:40px;">
     </a>
@@ -51,17 +51,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url 'home' %}">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url 'about' %}">About Me</a>
+          <a class="nav-link text-white" href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Contact Me</a>
+          <a class="nav-link text-white" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="{% url 'blogs:tech_blogs' %}">Blogs</a>
+          <a class="nav-link text-white" href="{% url 'blogs:tech_blogs' %}">Blogs</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link text-dark" href="{% static '/Prashaint_Mishra.pdf' %}">Download CV</a>
@@ -71,13 +71,13 @@
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form> -->
-      <a href="https://github.com/prashaint" class="nav-item nav-link" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/prashaint" class="nav-item nav-link" target="_blank"><i class="fa fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=1615068882" class="nav-item nav-link" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/MishraPrashaint" class="nav-item nav-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/prashaint" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/prashaint" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=1615068882" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/MishraPrashaint" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-twitter"></i></a>
       <!-- <a href="#" class="nav-item nav-link"><i class="fa fa-google-plus"></i></a> -->
-      <a href="https://www.instagram.com/prashaint/" class="nav-item nav-link" target="_blank"><i class="fa fa-instagram"></i></a>
-      <a href="https://in.pinterest.com/prashaint_mishra/" class="nav-item nav-link" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+      <a href="https://www.instagram.com/prashaint/" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://in.pinterest.com/prashaint_mishra/" class="nav-item nav-link text-white" target="_blank"><i class="fa fa-pinterest-p"></i></a>
 
     </div>
   </nav>
@@ -99,7 +99,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3 text-white">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="{% url 'about' %}">About us</a>
+          <a class="text-success" href="{% url 'about' %}">About us</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -107,7 +107,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3 text-white">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Projects</a>
+          <a class="text-success" href="#!">Projects</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -115,14 +115,14 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3 text-white">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="{% url 'blogs:tech_blogs' %}">Blogs</a>
+          <a class="text-success" href="{% url 'blogs:tech_blogs' %}">Blogs</a>
         </h6>
       </div>
       <!-- Grid column -->
       <!-- Grid column -->
       <div class="col-md-2 mb-3 text-white">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Contact</a>
+          <a class="text-success" href="#!">Contact</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -150,27 +150,27 @@
       <div class="col-md-12">
         <div class="mb-5">
           <!-- GitHub -->
-          <a class="git-ic" href="https://github.com/prashaint" target="_blank">
+          <a class="git-ic text-success" href="https://github.com/prashaint" target="_blank">
             <i class="fa fa-github fa-lg white-text mr-4"> </i>
           </a>
           <!-- Facebook -->
-          <a class="fb-ic" href="https://www.facebook.com/profile.php?id=1615068882" target="_blank">
+          <a class="fb-ic text-success" href="https://www.facebook.com/profile.php?id=1615068882" target="_blank">
             <i class="fa fa-facebook-f fa-lg white-text mr-4"> </i>
           </a>
           <!-- Twitter -->
-          <a class="tw-ic" href="https://twitter.com/MishraPrashaint" target="_blank">
+          <a class="tw-ic text-success" href="https://twitter.com/MishraPrashaint" target="_blank">
             <i class="fa fa-twitter fa-lg white-text mr-4"> </i>
           </a>
           <!-- instagram-->
-          <a class="gplus-ic" href="https://www.instagram.com/prashaint/" target="_blank">
+          <a class="gplus-ic text-success" href="https://www.instagram.com/prashaint/" target="_blank">
             <i class="fa fa-instagram fa-lg white-text mr-4"> </i>
           </a>
           <!--Linkedin -->
-          <a class="li-ic" href="https://www.linkedin.com/in/prashaint" target="_blank">
+          <a class="li-ic text-success" href="https://www.linkedin.com/in/prashaint" target="_blank">
             <i class="fa fa-linkedin fa-lg white-text mr-4"> </i>
           </a>
           <!--Pinterest-->
-          <a class="pin-ic" href="https://in.pinterest.com/prashaint_mishra/" target="_blank">
+          <a class="pin-ic text-success" href="https://in.pinterest.com/prashaint_mishra/" target="_blank">
             <i class="fa fa-pinterest fa-lg white-text"> </i>
           </a>
         </div>
@@ -182,7 +182,7 @@
   <!-- Footer Links -->
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">Developed by Prashaint Mishra with Django Web Framework.<br>© 2020 Copyright:
-    <a href="#"> mishra.prashaint.com</a>
+    <a class="text-success" href="#"> mishra.prashaint.com</a>
   </div>
   <!-- Copyright -->
 </footer>

@@ -1,5 +1,6 @@
 body{
-	background: #bdb6b6;
+	background: #f0e9e9;
+	background-color: blanchedalmond;
 	font-family: 'Varela Round', sans-serif;
 }
 .form-inline {
@@ -23,3 +24,7 @@ body{
 	}
 }
 
+.nav span:hover {
+	color: red;
+
+}
