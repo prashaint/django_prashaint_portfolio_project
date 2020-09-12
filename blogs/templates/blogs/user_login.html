@@ -9,7 +9,7 @@
     <div class="card-header bg-info text-white"><h4>User Login Form</h4></div>
     <div class="card-body">
       <p><b>Please fill following form to Login!</b></p>
-        <p><h4> {{ error }} </h4></p>
+        <p><h4 class="text-danger"> {{ error }} </h4></p>
         <form method="POST">
           {% csrf_token %}
           {{ form.as_p }}
