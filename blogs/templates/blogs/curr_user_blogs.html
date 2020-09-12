@@ -12,10 +12,10 @@
       <div class="col-md-7">
         <a href="{% url 'blogs:details' blog.id %}"><h4>{{ blog.title }}</h4></a>
         <p class="lead">{{ blog.body }}</p>
-        <p><a class="btn btn-lg btn-primary" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
-        <p class="lead"><span class="text-muted">Author: {{ blog.author }}</span></p>
-        <p class="lead"><span class="text-muted">Created on: {{ blog.created_date }}</span></p>
-        <p class="lead"><span class="text-muted">Published on: {{ blog.published_date }}</span></p>
+        <p><a class="btn btn-outline-success" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
+        <h6><span class="text-muted">Author: {{ blog.author }}</span></h6>
+        <h6><span class="text-muted">Last updated on: {{ blog.updated_on }}</span></h6>
+        <h6><span class="text-muted">Created on: {{ blog.created_on }}</span></h6>
       </div>
     </div>
 

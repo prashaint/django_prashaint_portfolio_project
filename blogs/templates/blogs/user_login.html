@@ -6,14 +6,14 @@
   <hr class="featurette-divider">
   <div class="container">
   <div class="card" >
-    <div class="card-header bg-info text-white"><h3>User Login Form</h3></div>
+    <div class="card-header bg-info text-white"><h4>User Login Form</h4></div>
     <div class="card-body">
       <p><b>Please fill following form to Login!</b></p>
         <p><h4> {{ error }} </h4></p>
         <form method="POST">
           {% csrf_token %}
           {{ form.as_p }}
-          <button class="btn btn-primary" type="submit">Login</button>
+          <button class="btn btn-outline-success" type="submit">Login</button>
           <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button" type="submit">Sign up!</a></p> -->
         </form>
     </div>
