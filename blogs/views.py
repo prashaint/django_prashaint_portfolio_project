@@ -13,7 +13,6 @@ class BlogPostForm(ModelForm):
 		model = BlogPost
 		fields = '__all__'
 
-
 def new_blog_post(request):
 	if request.method == 'GET':
 		return render(request, 'blogs/new_blog_post.html', {'form':BlogPostForm()})
@@ -35,7 +34,6 @@ def details(request, blog_id):
 	return render(request, 'blogs/details.html', {'blog':blog})
 
 def curr_user_blogs(request):
-	#Call function to create a new post.
 	blogs = BlogPost.objects.all()
 	return render(request, 'blogs/curr_user_blogs.html', {'blogs':blogs})
 
