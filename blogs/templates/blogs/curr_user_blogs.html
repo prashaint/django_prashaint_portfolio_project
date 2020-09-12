@@ -11,7 +11,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <a href="{% url 'blogs:details' blog.id %}"><h4>{{ blog.title }}</h4></a>
-        <p class="lead">{{ blog.body }}</p>
+        <p class="lead">{{ blog.content }}</p>
         <p><a class="btn btn-outline-success" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
         <h6><span class="text-muted">Author: {{ blog.author }}</span></h6>
         <h6><span class="text-muted">Last updated on: {{ blog.updated_on }}</span></h6>

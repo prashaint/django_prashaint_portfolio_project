@@ -70,6 +70,9 @@
         {% if user.is_authenticated %}
         <ul class="navbar-nav ml-auto">
         <li class="nav-item" >
+            <a class="nav-link text-white" href="{% url 'blogs:new_blog_post' %}">Post New Blog</a>
+        </li>
+        <li class="nav-item" >
           <a class="nav-link text-white" href="{% url 'blogs:curr_user_blogs' %}">{{ user.username }} </a>
         </li>
         <li class="nav-item">

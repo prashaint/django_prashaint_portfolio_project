@@ -5,7 +5,26 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.views import generic
+from django.forms import ModelForm
 
+
+class BlogPostForm(ModelForm):
+	class Meta:
+		model = BlogPost
+		fields = '__all__'
+
+
+def new_blog_post(request):
+	if request.method == 'GET':
+		return render(request, 'blogs/new_blog_post.html', {'form':BlogPostForm()})
+	else:
+		if request.method == 'POST':
+			new_blog = BlogPost()
+			new_post_form = BlogPostForm(request.POST, instance=new_blog)
+			new_post = new_post_form.save()
+			return redirect('blogs:curr_user_blogs')
+		else:
+			return render(request, 'blogs/new_blog_post.html', {'form':BlogPostForm()})
 
 def tech_blogs(request):
 	blogs = BlogPost.objects.filter(status=1).order_by('-created_on')
@@ -16,6 +35,7 @@ def details(request, blog_id):
 	return render(request, 'blogs/details.html', {'blog':blog})
 
 def curr_user_blogs(request):
+	#Call function to create a new post.
 	blogs = BlogPost.objects.all()
 	return render(request, 'blogs/curr_user_blogs.html', {'blogs':blogs})
 

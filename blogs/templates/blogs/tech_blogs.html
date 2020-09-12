@@ -35,7 +35,7 @@
     <img src="{% static '/logo.png' %}" class="card-img-top" alt="card-img">
     <div class="card-body">
       <h5 class="card-title">{{ blog.title }}</h5>
-      <p class="card-text">{{ blog.body }}</p>
+      <p class="card-text">{{ blog.content }}</p>
       <p><a class="btn btn-outline-success" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a></p>
       <p class="text-muted">
         <h6><span class="text-muted">Author: {{ blog.author }}</span></h6>
