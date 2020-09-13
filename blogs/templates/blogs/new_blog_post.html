@@ -8,7 +8,7 @@
   <div class="card" >
     <div class="card-header bg-info text-white"><h4>New blog creation form</h4></div>
     <div class="card-body">
-      <p><b>Please fill all the fields in order to post a new blog!</b></p>
+      <p><h5 class="text-success">Please fill all the fields in order to post a new blog!</h5></p>
         <p><h4 class="text-danger"> {{ error }} </h4></p>
         <form method="POST">
           {% csrf_token %}
@@ -17,7 +17,7 @@
           <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button" type="submit">Sign up!</a></p> -->
         </form>
     </div>
-    <div class="card-footer bg-info text-white">Powered by Django</div>
+    <div class="card-footer bg-light text-white text-muted">Powered by Django</div>
   </div>
 </div>
 <hr class="featurette-divider">
