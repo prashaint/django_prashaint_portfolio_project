@@ -10,12 +10,14 @@
     <div class="card-body">
       <p><h5 class="text-success">Please fill all the fields in order to post a new blog!</h5></p>
         <p><h4 class="text-danger"> {{ error }} </h4></p>
+        <div class="form-group">
         <form method="POST">
           {% csrf_token %}
           {{ form.as_p }}
           <button class="btn btn-outline-success" type="submit">Post the blog</button>
           <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button" type="submit">Sign up!</a></p> -->
         </form>
+      </div>
     </div>
     <div class="card-footer bg-light text-white text-muted">Powered by Django</div>
   </div>

@@ -6,11 +6,13 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.views import generic
 from django.forms import ModelForm
+from .forms import BlogPostForm
 
 
 class BlogPostForm(ModelForm):
 	class Meta:
 		model = BlogPost
+		form_class = BlogPostForm
 		fields = '__all__'
 
 def new_blog_post(request):
