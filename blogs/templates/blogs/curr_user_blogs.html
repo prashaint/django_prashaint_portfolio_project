@@ -11,7 +11,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <a href="{% url 'blogs:details' blog.id %}"><h4>{{ blog.title }}</h4></a>
-        <p class="lead">{{ blog.content | safe }}</p>
+        <p class="lead">{{ blog.content |slice:":100" | safe }}</p>
         <p><a class="btn btn-outline-success btn-sm" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a>
         <a class="btn btn-outline-info btn-sm" href="{% url 'blogs:update_blog_post' blog.id %}" role="button">Edit Post</a>
         <a class="btn btn-outline-danger btn-sm" href="{% url 'blogs:delete_post' blog.id %}" role="button">Delete Post</a>
