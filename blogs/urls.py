@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
-from .views import ListView, DetailView, UpdateBlogView, HomeView
+from .views import ListView, DetailView, UpdateBlogView, HomeView, DeletePostView
 
 app_name = 'blogs'
 
@@ -16,4 +16,5 @@ urlpatterns = [
     path('user_logout/', views.user_logout, name="user_logout"),
     path('new_blog_post/', views.new_blog_post, name="new_blog_post"),
     path('curr_user_blogs/<int:pk>', UpdateBlogView.as_view(), name='update_blog_post'),
+    path('curr_user_blogs/<int:pk>/DeletePost', DeletePostView.as_view(), name='delete_post'),
 ]

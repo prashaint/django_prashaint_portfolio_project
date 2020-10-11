@@ -25,4 +25,4 @@ class BlogPost(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('curr_user_blogs')
+        return reverse('blogs:curr_user_blogs')

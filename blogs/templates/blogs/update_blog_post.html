@@ -5,6 +5,7 @@
 
   <hr class="featurette-divider">
   <div class="container">
+    {% if user.is_authenticated %}
   <div class="card" >
     <div class="card-header bg-info text-white"><h4>Update your blog post</h4></div>
     <div class="card-body">
@@ -21,6 +22,17 @@
     </div>
     <div class="card-footer bg-light text-white text-muted">Powered by Django</div>
   </div>
+  {% else %}
+  <div class="card" >
+    <div class="card-header bg-info text-white"><h4>Unauthorized Access!</h4></div>
+    <div class="card-body">
+      <p><h3 class="text-danger">You're not authorized to perform this operation!</h3>
+        <h5 class="text-info">Please login to your account to write/edit/delete posts. </h5>
+      </p>
+    </div>
+    <div class="card-footer bg-light text-white text-muted">Powered by Django</div>
+  </div>
+  {% endif %}
 </div>
 <hr class="featurette-divider">
 

@@ -7,8 +7,8 @@ from django.db import IntegrityError
 from django.views import generic
 from django.forms import ModelForm
 from .forms import BlogPostForm
-from django.views.generic import UpdateView, ListView, DetailView
-
+from django.views.generic import UpdateView, ListView, DetailView, DeleteView
+from django.urls import reverse
 
 class HomeView(ListView):
 	model = BlogPost
@@ -18,6 +18,16 @@ class UpdateBlogView(UpdateView):
 	model = BlogPost
 	template_name = 'blogs/update_blog_post.html'
 	fields = [ 'title', 'content' ]
+		
+	def get_success_url(self):
+		return reverse('blogs:curr_user_blogs')
+
+class DeletePostView(DeleteView):
+	model = BlogPost
+	template_name = 'blogs/delete_post.html'
+
+	def get_success_url(self):
+		return reverse('blogs:curr_user_blogs')
 
 class BlogPostForm(ModelForm):
 	class Meta:
@@ -79,8 +89,6 @@ def user_logout(request):
 	if request.method == 'POST':
 		logout(request)
 		return render(request, 'blogs/user_logout.html')
-
-
 
 
 
