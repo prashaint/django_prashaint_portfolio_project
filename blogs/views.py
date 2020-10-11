@@ -7,7 +7,17 @@ from django.db import IntegrityError
 from django.views import generic
 from django.forms import ModelForm
 from .forms import BlogPostForm
+from django.views.generic import UpdateView, ListView, DetailView
 
+
+class HomeView(ListView):
+	model = BlogPost
+	template_name = 'blogs/tech_blogs.html'
+
+class UpdateBlogView(UpdateView):
+	model = BlogPost
+	template_name = 'blogs/update_blog_post.html'
+	fields = [ 'title', 'content' ]
 
 class BlogPostForm(ModelForm):
 	class Meta:
