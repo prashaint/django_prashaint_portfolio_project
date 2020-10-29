@@ -17,7 +17,7 @@ class HomeView(ListView):
 class UpdateBlogView(UpdateView):
 	model = BlogPost
 	template_name = 'blogs/update_blog_post.html'
-	fields = [ 'title', 'content' ]
+	fields = [ 'title', 'category' ,'content' ]
 		
 	def get_success_url(self):
 		return reverse('blogs:curr_user_blogs')

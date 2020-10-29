@@ -4,22 +4,19 @@
 {% load static %}
 
   <div class="container marketing">
-  <h2 class="text-success">Welcome {{ user.username }} to your account page!</h2><br>
+  <h4 class="text-success">Welcome <strong>{{ user.username }}</strong> to your account page!</h4><br>
     <!-- START THE FEATURETTES -->
 {% for blog in blogs %}
 <hr class="featurette-divider">
     <div class="row featurette">
-      <div class="col-md-7">
-        <a href="{% url 'blogs:details' blog.id %}"><h4>{{ blog.title }}</h4></a>
+      <div class="col-md-10">
+        <a href="{% url 'blogs:details' blog.id %}"><h5>{{ blog.title }}</h5></a>
         <p class="lead">{{ blog.content |slice:":100" | safe }}</p>
         <p><a class="btn btn-outline-success btn-sm" href="{% url 'blogs:details' blog.id %}" role="button">Read More</a>
         <a class="btn btn-outline-info btn-sm" href="{% url 'blogs:update_blog_post' blog.id %}" role="button">Edit Post</a>
         <a class="btn btn-outline-danger btn-sm" href="{% url 'blogs:delete_post' blog.id %}" role="button">Delete Post</a>
         </p>
-        <h6><span class="text-muted">Author: {{ blog.author }}</span></h6>
-        <h6><span class="text-muted">Last updated on: {{ blog.updated_on }}</span></h6>
-        <h6><span class="text-muted">Created on: {{ blog.created_on }}</span></h6>
-        
+        <h6><span class="text-muted">Author: {{ blog.author }} | Last updated on: {{ blog.updated_on }} | Created on: {{ blog.created_on }}</span></h6>
       </div>
     </div>
 
