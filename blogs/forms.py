@@ -18,7 +18,8 @@ class BlogPostForm(forms.ModelForm):
             'author': forms.Select(attrs={'class':'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class':'form-control'}),
             #'updated_on': forms.TextInput(attrs={'class':'form-control'}),
-            'content': forms.Textarea(attrs={'class':'form-control'}),
+            #'content': forms.Textarea(attrs={'class':'form-control'}),
             #'created_on': forms.TextInput(attrs={'class':'form-control'}),
             'status': forms.TextInput(attrs={'class':'form-control'}),
         }
+        
