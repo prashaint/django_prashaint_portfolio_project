@@ -23,11 +23,12 @@ class Category(models.Model):
 class BlogPost(models.Model):
     title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_author')
+    category = models.CharField(max_length=200, default="undefined")
     updated_on = models.DateTimeField(auto_now=True)
     content = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    category = models.CharField(max_length=100, default='Undefined')
+    
     
     class Meta:
         ordering = ['-created_on']

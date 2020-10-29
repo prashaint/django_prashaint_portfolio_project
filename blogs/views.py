@@ -29,11 +29,11 @@ class DeletePostView(DeleteView):
 	def get_success_url(self):
 		return reverse('blogs:curr_user_blogs')
 
-class BlogPostForm(ModelForm):
-	class Meta:
-		model = BlogPost
-		form_class = BlogPostForm
-		fields = '__all__'
+# class BlogPostForm1(ModelForm):
+# 	class Meta:
+# 		model = BlogPost
+# 		form_class = BlogPostForm
+# 		fields = ('title', 'author', 'category', 'content', 'status')
 
 def new_blog_post(request):
 	if request.method == 'GET':
